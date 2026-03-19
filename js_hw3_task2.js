@@ -1,6 +1,6 @@
 function addTask() {
     const text = document.getElementById('todo-input').value;
-    if (text === '') return;
+    if (text === '') return; //stopper funksjonen hvis inputfeltet er tomt.
 
     const li = document.createElement('li');
     li.textContent = text;
@@ -9,7 +9,7 @@ function addTask() {
     if (date !== '') {
     const dateSpan = document.createElement('span');
     dateSpan.textContent = date;
-    li.appendChild(dateSpan);
+    li.appendChild(dateSpan); //legger til dato kun hvis dene er fylt inn
 }
 
     const checkbox = document.createElement('input');
@@ -28,7 +28,12 @@ function addTask() {
 }
 
 function removeTask(button) {
-    button.parentElement.remove();
+    button.parentElement.remove(); //fjerner hele li-elementet ikke bare knappen
+}
+
+function toggleDone(checkbox) {
+    checkbox.parentElement.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
+}
 }
 
 function toggleDone(checkbox) {
