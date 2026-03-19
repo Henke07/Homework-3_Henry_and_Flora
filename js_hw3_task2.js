@@ -34,7 +34,7 @@ function removeTask(button) {
 function toggleDone(checkbox) {
     checkbox.parentElement.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
 }
-}
+
 
 function toggleDone(checkbox) {
     checkbox.parentElement.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
